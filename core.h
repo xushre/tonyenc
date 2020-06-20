@@ -83,7 +83,7 @@ zend_op_array *cgi_compile_file(zend_file_handle *file_handle, int type)
         goto final;
 
     if (file_handle->type == ZEND_HANDLE_FP) fclose(file_handle->handle.fp);
-    if (file_handle->type == ZEND_HANDLE_FD) close(file_handle->handle.fd);
+    //if (file_handle->type == ZEND_HANDLE_FD) close(file_handle->handle.fd);
 
 #ifdef PHP_WIN32
     file_handle->handle.fp = res;
